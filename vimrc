@@ -80,6 +80,8 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
 nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
