@@ -35,8 +35,11 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 
+" Plugin configuration
+
 nmap <F2> :NERDTreeToggle<cr>
 syntax on
+
 set background=dark
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
@@ -58,7 +61,16 @@ imap <C-v> <ESC>"+pa
 
 nnoremap <F5> :UndotreeToggle<cr>
 
-if has("persistent_undo")
-	set undodir='~/.vim/undodir/'
-	set undofile
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    call system('mkdir ' . vimDir)
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
 endif
