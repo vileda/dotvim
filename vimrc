@@ -33,6 +33,22 @@ Plug 'phildawes/racer'
 
 Plug 'mbbill/undotree'
 
+Plug 'vim-ruby/vim-ruby'
+
+Plug 'tpope/vim-rails'
+
+Plug 'tpope/vim-rails'
+
+Plug 'bling/vim-airline'
+
+Plug 'kien/ctrlp.vim'
+
+Plug 'majutsushi/tagbar'
+
+Plug 'chrisbra/csv.vim'
+
+Plug 'jonathanfilip/vim-lucius'
+
 call plug#end()
 
 " Plugin configuration
@@ -40,10 +56,14 @@ call plug#end()
 nmap <F2> :NERDTreeToggle<cr>
 syntax on
 
-set background=dark
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme solarized
+set t_Co=256
+
+"set background=dark
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
+let g:lucius_contrast_bg = "high"
+colorscheme lucius
+LuciusBlack
 
 set guifont=Terminus\ 13
 
@@ -74,3 +94,7 @@ if has('persistent_undo')
     let &undodir = myUndoDir
     set undofile
 endif
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='jellybeans'
+set laststatus=2
