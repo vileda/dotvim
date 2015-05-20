@@ -58,12 +58,8 @@ syntax on
 
 set t_Co=256
 
-"set background=dark
-"let g:solarized_visibility = "high"
-"let g:solarized_contrast = "high"
-let g:lucius_contrast_bg = "high"
 colorscheme lucius
-LuciusBlack
+LuciusBlackHighContrast
 
 set guifont=Terminus\ 13
 
