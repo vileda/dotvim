@@ -56,10 +56,13 @@ call plug#end()
 nmap <F2> :NERDTreeToggle<cr>
 syntax on
 
-set t_Co=256
+"set t_Co=256
 
-colorscheme lucius
-LuciusBlackHighContrast
+"colorscheme lucius
+"LuciusBlackHighContrast
+
+set background=dark
+colorscheme solarized
 
 set guifont=Terminus\ 13
 
@@ -94,5 +97,5 @@ if has('persistent_undo')
 endif
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='jellybeans'
+let g:airline_theme='dark'
 set laststatus=2
