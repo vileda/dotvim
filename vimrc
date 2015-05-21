@@ -56,11 +56,6 @@ call plug#end()
 nmap <F2> :NERDTreeToggle<cr>
 syntax on
 
-"set t_Co=256
-
-"colorscheme lucius
-"LuciusBlackHighContrast
-
 set background=dark
 colorscheme solarized
 
@@ -70,8 +65,10 @@ set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
 set guioptions-=r  "scrollbar
 
-let g:racer_cmd = "/home/vileda/.vim/plugged/racer/target/release/racer"
-let $RUST_SRC_PATH="/home/vileda/.vim/plugged/racer/src/"
+let vimDir = '$HOME/.vim'
+
+let g:racer_cmd = expand(vimDir."/plugged/racer/target/release/racer")
+let $RUST_SRC_PATH = expand(vimDir."/plugged/racer/src/")
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -83,7 +80,6 @@ nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
 " Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir
 
 " Keep undo history across sessions by storing it in a file
