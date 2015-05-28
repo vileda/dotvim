@@ -49,6 +49,8 @@ Plug 'chrisbra/csv.vim'
 
 Plug 'jonathanfilip/vim-lucius'
 
+Plug 'ntpeters/vim-better-whitespace'
+
 call plug#end()
 
 " Plugin configuration
@@ -95,3 +97,4 @@ endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
 set laststatus=2
+set backspace=indent,eol,start
