@@ -19,6 +19,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 Plug 'fatih/vim-go'
 
+Plug 'klen/python-mode'
+
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'wting/rust.vim'
@@ -98,3 +100,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
 set laststatus=2
 set backspace=indent,eol,start
+set mouse=a
+set number
