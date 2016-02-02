@@ -39,8 +39,6 @@ Plug 'vim-ruby/vim-ruby'
 
 Plug 'tpope/vim-rails'
 
-Plug 'tpope/vim-rails'
-
 Plug 'bling/vim-airline'
 
 Plug 'kien/ctrlp.vim'
@@ -52,6 +50,14 @@ Plug 'chrisbra/csv.vim'
 Plug 'jonathanfilip/vim-lucius'
 
 Plug 'ntpeters/vim-better-whitespace'
+
+Plug 'sirtaj/vim-openscad'
+
+Plug 'def-lkb/ocp-indent-vim'
+
+Plug 'atweiden/merlin.vim'
+
+Plug 'def-lkb/vimbufsync'
 
 call plug#end()
 
